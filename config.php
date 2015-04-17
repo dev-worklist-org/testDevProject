@@ -77,7 +77,7 @@ if (!defined('SVN_REV_URL'))    define('SVN_REV_URL', 'http://svn.worklist.net/r
 if (!defined('FEEDBACK_EMAIL')) define('FEEDBACK_EMAIL', 'feedback@lovemachineinc.com');
 if (!defined('FINANCE_EMAIL'))  define('FINANCE_EMAIL', 'finance@lovemachineinc.com');
 
-if (!defined('DB_SERVER'))      define('DB_SERVER', 'dev-db.worklist.net');
+if (!defined('DB_SERVER'))      define('DB_SERVER', 'localhost');
 if (!defined('DB_USER'))        define('DB_USER', 'dev_worklist');
 if (!defined('DB_PASSWORD'))    define('DB_PASSWORD', 'unsecure');
 if (!defined('DB_NAME'))        define('DB_NAME', 'dev_worklist');
