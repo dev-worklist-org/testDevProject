@@ -17,7 +17,7 @@ DEBUG_FILE=${WORKLIST_DEBUG_FILE:=$CURRENT_PATH/php.errors}
 
 # We assume that developers works on their own forked repos 
 # so lets keep in sync with the upstream repo
-git remote add upstream https://github.com/highfidelity/worklist 2> /dev/null
+git remote add upstream https://github.com/dev-worklist-org/testDevProject 2> /dev/null
 
 # pre-commit hook setup to enable trailing whitespaces restrictions on commits
 cp $CURRENT_PATH/tools/hooks/pre-commit $CURRENT_PATH/.git/hooks/pre-commit
