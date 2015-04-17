@@ -1,0 +1,179 @@
+#settings h2 {
+    font-weight: bold;
+}
+
+#settings h2,
+#settings h3 {
+    border-bottom: 2px solid #999;
+    padding-bottom: 5px;
+}
+
+#settings h2,
+#settings h3,
+#settings > .row > section > label {
+    color: #007f7c;
+}
+
+#settings > .row {
+    margin-bottom: 20px;
+}
+
+#settings > .row > section > label,
+#settings > .row p > a {
+    color: #007f7c;
+}
+
+#settings > .row p > a {
+    text-decoration: underline;
+}
+
+#settings > .row > section > label {
+    font-weight: bold;
+    margin: 15px 0 0;
+    font-size: 1em;
+    display: block;
+}
+
+#settings input[type=text],
+#settings textarea {
+    color: #333;
+}
+
+#settings > .row p {
+    padding: 15px 10px;
+}
+
+#settings section > label + ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#settings > .row > section > p:nth-child(odd),
+#settings section > label + ul > li:nth-child(odd) {
+    background-color: #d6d6d6;
+}
+
+
+#settings > .row p:nth-child(even) > a {
+    font-weight: bold;
+}
+
+/* let's use 'styleable' controls instead of checkboxes */
+#settings input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+#settings input[type="checkbox"] + label {
+    line-height: 2.2em;
+    padding-left: 40px;
+    font-weight: normal;
+}
+@media (max-width: 768px) {
+    #settings input[type="checkbox"] + label {
+        line-height: 3em
+    }
+}
+#settings input[type="checkbox"] + label:before {
+    content: '\00a0';
+    width: 23px;
+    line-height: 1em;
+    border-radius: 5px;    
+    font-family: FontAwesome;
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin: 8px 5px 0 -35px;
+    color: #999;
+    font-size: 1.1em;
+    padding: 2px;
+    background-color: #fff;
+}
+#settings input[type="checkbox"]:focus + label:before {
+    border-color: #007F7c;
+}
+#settings input[type="checkbox"]:checked + label:before {
+    content: '\f00c';
+}
+
+#settings input[type="submit"] {
+    font-size: 1.2em;
+    padding: 8px 16px;
+}
+
+#settings .uploadnotice-w9 {
+    margin-top: 10px;
+}
+
+/**
+ * User's System settings
+ */
+#systems-forms > div {
+    margin: 15px 0 0;
+}
+#systems-forms > div > a + h4 {
+    font-weight: bold;
+    margin: 15px 0 0;
+    display: inline-block;
+    color: #007f7c;
+}
+#systems-forms > div label {
+    color: #666;
+    margin: 15px 0 0;
+}
+#systems-forms > div label:first-child {
+    margin: 0;
+}
+#systems-forms > div .system-remove {
+    display: block;
+    float: right;
+    margin: 15px 0 0;
+    color: #007f7c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#systems-forms .system-placeholder-wrapper {
+    display: none;
+}
+#settings .system-add {
+    display: inline-block;
+    margin: 15px 0 0;
+    color: #007f7c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/**
+ * validation messages 
+ */
+.LV_validation_message {
+    position: absolute;
+    font-size: .8em;
+    color: #ff5582;
+}
+#settings > .row  select + .LV_validation_message {
+    margin-top: 35px;
+}
+
+#w9_accepted_label + .LV_validation_message {
+    display: none;
+}
+
+@media (max-width: 480px) {
+
+    #settings input[type="checkbox"] + label {
+        line-height: 1em;
+    }
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: #608e96;
+    border-radius: 4px;
+    height: 27px;
+    padding-left: 32px !important;
+    margin: 5px;
+    position: relative;
+    vertical-align: top;
+    background-position: 8px 6px;
+}

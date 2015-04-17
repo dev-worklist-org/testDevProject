@@ -1,0 +1,20 @@
+#fundForm {
+    float: left;
+}
+
+#paymentForm > p {
+    text-align: right;
+}
+
+#total-selected-fees {
+    display: inline-block;
+    width: 100px;
+}
+
+#submit-btns input {
+    margin-bottom: 10px;
+}
+
+#submit-btns > fieldset {
+    text-align: right;
+}

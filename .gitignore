@@ -1,0 +1,20 @@
+
+# local install configuration
+/server.local.php
+
+# dependencies & composer.lock
+/vendor
+/composer.lock
+composer.phar
+
+# temp dir
+/tmp
+
+# apache dir-level configuration
+/.htaccess
+
+# commonly used for error logging on sandboxes
+/php.errors
+
+.idea
+/uploads

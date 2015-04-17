@@ -1,0 +1,129 @@
+/**
+ * Stylesheet for login page
+ */
+
+body {
+    padding-top: 0;
+    padding-bottom: 40px;
+    background-color: #efefef;
+}
+
+#form-login {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 37px;
+}
+#form-login .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+#form-login .form-control:focus {
+    z-index: 2;
+}
+#form-login input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#form-login input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#form-login > p,
+#form-login > label,
+#form-login > fieldset {
+    padding: 0 30px 10px;
+}
+
+#form-login > p.error {
+    background-color: #009999;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+#form-login > p.error a {
+    color: #fff;
+    font-weight: bold;
+    opacity: inherit;
+    text-decoration: underline;
+}
+
+#form-login > p.error a:hover {
+    opacity: 0.5;
+}
+
+#form-login button[type="submit"], #form-login a#github {
+    border: 0 none;
+    background-color: #608e96;
+    color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    padding: 7px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#form-login button[type="submit"]:hover,
+#form-login button[type="submit"]:focus,
+#form-login a#github:hover,
+#form-login a#github:focus {
+    background-color: #007F7c;
+    text-decoration: none;
+}
+
+#form-login > fieldset,
+#form-login > fieldset > label {
+    color: #666666;
+    font-size: 13px;
+}
+
+#form-login fieldset > a {
+    color: #009999;
+}
+
+#form-login > fieldset > label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+#form-login > fieldset > input {
+    border-radius: 0px;
+}
+
+/* let's not show the box shadow inherited from bootstrap this time */
+#form-login > fieldset > input:focus {
+    box-shadow: none;
+    border-color: #009999;
+}
+
+section#footer {
+    display: none;
+}
+
+#form-login > #github-login-pane {
+    padding-left: 30px;
+    border-bottom: solid 1px #dddddd;
+    padding-bottom: 26px;
+}
+
+#form-login h6 {
+    color: #666666;
+    font-weight: bold;
+}
+
+.alt-login-title {
+    margin-left: 30px;
+    padding-top: 13px;
+}
+
+fieldset.last {
+    padding-bottom: 2px !important;
+}

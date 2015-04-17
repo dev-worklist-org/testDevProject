@@ -1,0 +1,60 @@
+<h2>PayPal MassPay Run</h2>
+{{#alert_msg}}<p>{{alert_msg}}</p>{{/alert_msg}}
+{{^actionPay}}
+    <form id="fundForm" method="POST" action="./payments">
+        <label id="label-fund" for="fund_id">Fund:</label>
+        {{& fundSelectBox}}
+    </form>
+    <form id="paymentForm" action="./payments?{{& order}}" method="POST">
+        <p>
+            Actions:
+            <input type="button" value="Invert Selection" id="invertSelection" />
+            <input type="button" value="Select All" id="selectAll" />
+            <input type="button" value="Select None" id="selectNone" />
+        </p>          
+        <input type="hidden" id="action" name="action" 
+          value="{{^actionDefined}}confirm{{/actionDefined}}{{#actionDefined}}pay{{/actionDefined}}" />
+        <table class="table table-bordered" id="payments-table">
+            <thead>
+                <tr>
+                    <th>Pay</th>
+                    <th>Developer</th>
+                    <th>Fee/Bonus ID</th>
+                    <th>Task ID</th>
+                    <th>Project</th>
+                    <th>Amount</th>
+                    <th>Job Summary</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            {{& paymentsTableRows}}
+        </table>
+        <div class="row">
+            <div id="submit-btns" class="col-md-offset-6 col-md-6">
+                {{#actionConfirm}}
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" />
+
+                    <label for="pp_api_username">Paypal API Username:</label>
+                    <input type="text" name="pp_api_username" id="pp_api_username" class="form-control" />
+
+                    <label for="pp_api_password">Paypal API Password:</label>
+                    <input type="password" name="pp_api_password" id="pp_api_password" class="form-control" />
+
+                    <label for="pp_api_signature">Paypal API Signature:</label> 
+                    <input type="password" name="pp_api_signature" id="pp_api_signature" class="form-control" />
+                {{/actionConfirm}}
+                <fieldset>
+                    <label for="total-selected-fees">Total Selected:</label>
+                    <input type="text" id="total-selected-fees" disabled="disabled" value="0.00" class="form-control" />
+                    <input type="hidden" name="fund_id" value="{{fund_id}}" />
+                    <input class="disableable" type="submit" id="commit-btn" name="commit"
+                      value="{{#actionConfirm}}Pay Now{{/actionConfirm}}{{^actionConfirm}}Confirm{{/actionConfirm}}" />
+                </fieldset>
+            </div>
+        </div>
+    </form>
+{{/actionPay}}
+{{#actionPay}}
+   {{& paymentResults}}
+{{/actionPay}}

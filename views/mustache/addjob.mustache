@@ -1,0 +1,101 @@
+<form method="post" id="addJob">
+    <div class="row">
+       {{#editing}}
+            {{#canReassignRunner}}
+                <div class="col-sm-12">
+                    <p>Designer:</p>
+                    <div id="job-designer">
+                        {{& editableRunnerBox}}
+                    </div>
+                </div>
+            {{/canReassignRunner}}
+        {{/editing}}
+        <div class="col-sm-4">
+            <p>{{^editing}}Job is for this project...{{/editing}}{{#editing}}Job <b>#{{workitem.getId}}</b>, for project:{{/editing}}</p>
+            <select id="itemProjectCombo" name="itemProject" data-placeholder="Select project">
+                {{#projects}}
+                    <option value="{{id}}" {{#current}}selected="selected"{{/current}}>
+                        {{name}}
+                    </option>
+                {{/projects}}
+            </select>
+        </div>
+        {{#editing}}
+            <div class="col-sm-5">
+               {{#canSeeBudgetArea}}
+                    <p>Budget:</p>
+                    {{#isRunnerOfWorkitem}}
+                        <select id="budget-source-combo" name="budget-source-combo" data-placeholder="Select a budget">
+                            {{& getBudgetCombo}}
+                        </select>
+                    {{/isRunnerOfWorkitem}}
+                    {{^isRunnerOfWorkitem}}
+                        {{#worklist.budget_id}}<p>{{worklist.budget_reason}}</p>{{/worklist.budget_id}}{{^worklist.budget_id}}<p>Not assigned</p>{{/worklist.budget_id}}
+                    {{/isRunnerOfWorkitem}}
+                {{/canSeeBudgetArea}}
+            </div>
+        {{/editing}}
+    </div>
+    <div class="row">
+        <div class="col-sm-9">
+            <input type="text" id="summary" {{#editing}} value="{{workitem.getSummary}}" {{/editing}} name="summary" class="form-control" placeholder="Title" />
+        </div>
+    </div>
+    {{^editing}}
+        {{#userIsInternal}}
+        <section class="row">
+            <div class="col-sm-3">
+                <select name="assigned" data-placeholder="Select asignee">
+                    <option value="0">No one assigned</option>
+                    {{#internalUsers}}
+                        <option value="{{getId}}">{{getNickname}}</option>
+                    {{/internalUsers}}
+                </select>
+            </div>
+        </section>
+        {{/userIsInternal}}
+    {{/editing}}
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <label for="notes">Description</label>
+            <div class="autocomplete">
+                <textarea class="form-control autogrow" name="notes" id="notes"
+                  placeholder="describe the work necessary to successfully complete this job">{{#editing}}{{workitem.getNotes}}{{/editing}}</textarea>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <label>Labels</label>
+            <ul id="labels">
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-9">
+            <fieldset id="attachments">
+              <label>Drag &amp; drop or <em>select files</em> files to attach.</label>
+              <ul></ul>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" id="choose-job-status">
+        </div>
+
+        {{#userIsInternal}}
+        <div class="col-sm-offset-0 col-sm-6" id="save-button">
+            <input type="checkbox" name="is_internal" {{#editing}} {{#workitem.isInternal}}checked{{/workitem.isInternal}}{{/editing}} id="is_internal" />
+            <label for="is_internal">Internal</label>
+        {{/userIsInternal}}
+        {{^userIsInternal}}
+        <div class="col-sm-offset-2 col-sm-4">
+        {{/userIsInternal}}
+            <button class="btn btn-primary" type="submit" name="save_item">{{#editing}}Save changes{{/editing}} {{^editing}}Add Job{{/editing}}</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    var jobStatus = "{{getJobStatus}}";
+    $(function() {
+        AddJob.init({{#editing}}{{workitem.getId}}{{/editing}}{{^editing}}0{{/editing}}, {{#editing}}true{{/editing}}{{^editing}}false{{/editing}});
+    })
+</script>

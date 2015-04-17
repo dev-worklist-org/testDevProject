@@ -1,0 +1,97 @@
+.ui-combobox {
+	font-size: 12px;
+	padding: 0 5px 5px 5px;
+    border: 1px solid #d3d3d3;
+}
+
+.ui-combobox.ui-state-hover,
+.ui-combobox .ui-icon.ui-state-hover {
+    border: 1px solid #999999;
+}
+
+.ui-combobox-textbox {
+	background: none repeat scroll 0 0 transparent !important;
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	font-size: 12px !important;
+}
+
+.ui-combobox-textbox[readonly] {
+	cursor: default;
+}
+
+.ui-combobox .ui-icon {
+	background-color: transparent !important;
+	border-style: none none none solid !important;
+	border-width: medium medium medium 1px !important;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
+
+.ui-combobox-list {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #AAAAAA;
+	border-top: none;
+	cursor: default;
+	list-style: none outside none;
+	margin: 0;
+	max-height: 130px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0;
+	position: absolute;
+
+}
+
+ul.ui-combobox-list {
+    z-index: 100;
+}
+
+.ui-combobox-list li {
+    font-size: 12px;
+    padding: 3px 5px;
+    margin: 0;
+}
+
+.ui-combobox-list-selected {
+	background: lightyellow;
+}
+
+.ui-combobox-list li.ui-state-hover {
+	background: #66CC66;
+	border: none;
+}
+
+
+li[val=ALL] input[type=checkbox] {
+    visibility:hidden;
+}
+li[val=CheckDone] input[type=checkbox] {
+    visibility:hidden;
+}
+
+li[val=CheckDone].ui-state-hover {
+	background: none;
+	border: none;
+}
+
+#CheckDone {
+    background: none;
+    background-color: buttonface;
+    border: 2px outset buttonface;
+    color: buttontext;
+    cursor: default;
+    color:none;
+    width:50px;
+}
+
+ul.ui-combobox-list-multiple  li.ui-combobox-list-selected {
+	background:none;
+}
+
+.ui-combobox input, .ui-combobox input:hover, .ui-combobox input:active, .ui-combobox input:focus {
+    outline: none !important;
+    border: none !important;
+}

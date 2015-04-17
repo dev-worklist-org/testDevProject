@@ -1,0 +1,198 @@
+body > .container-fluid {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body > .container-fluid {
+        font-size: 12px;
+    }
+}
+
+.form-control {
+    color: #333333;
+}
+
+/* make some room at top of the form */
+#addJob > .row:first-child {
+    padding-top: 30px;
+}
+
+#addJob > .row:first-child > p {
+    padding-top: 17px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+#addJob > .row {
+    padding: 2px 0 0;
+}
+
+#addJob > .row:nth-child(3) {
+    margin-bottom: 0;
+}
+
+
+#addJob > .row label {
+    color: #608a92;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+#addJob .row:nth-child(1) p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #666;
+}
+
+/**
+ * Assigned user dropdown customization
+ */
+select[name="assigned"] + .chosen-container-single .chosen-single > span:first-child {
+    color: #666;
+}
+
+select[name="assigned"] + .chosen-container .chosen-results li.highlighted {
+    background: none #666;
+}
+
+select[name="assigned"] + .chosen-container-single .chosen-single {
+    padding-left: 30px;
+    position: relative;
+}
+
+select[name="assigned"] + .chosen-container-single .chosen-single:after {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 1.3em;
+    font-family: "Glyphicons Halflings";
+    content: '\e127';
+}
+
+select[name="assigned"] + .chosen-container-single .chosen-single > span:first-child {
+    color: #666;
+}
+
+select[name="assigned"] + .chosen-container-single .chosen-single div {
+    display: none;
+}
+
+select[name="assigned"] + .chosen-container-single {
+    margin-bottom: 15px;
+}
+
+#addJob .form-control {
+    font-size: 18px;
+}
+
+#labels {
+    list-style-type: none;
+    padding: 0 3px;
+    margin: 0;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    #labels {
+        position: inherit;
+    }
+}
+
+
+#labels li {
+    margin: 0;
+}
+
+#labels li input[type="checkbox"] {
+    display: none;
+}
+
+#labels li input[type="checkbox"] + label {
+    background-color: #E9EEEF;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #labels li {
+        display: inline-block;
+        margin: 2px 0;
+    }
+    #labels li input[type="checkbox"] + label {
+        font-size: 1.2em;
+    }
+    #save-button {
+        margin-top: 5px;
+    }
+}
+
+#labels li input[type="checkbox"]:checked + label {
+    background-color: #007F7c;
+    color: #fff;
+}
+
+#addJob textarea[name="notes"] {
+    min-height: 180px;
+}
+
+#addJob > .row:nth-child(4) > div > div,
+#addJob > .row:nth-child(4) > div > div > div {
+    padding: 0;
+}
+
+#addJob > .row:last-child > div {
+    line-height: 2.2em;
+    text-align: right;
+}
+
+#addJob button[type=submit] {
+    background: none #007F7c;
+    border-radius: 5px;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 2.2em;
+    margin-left: 15px;
+}
+
+/* Styles the status dropdown: */
+#addJob #itemStatusCombo_chosen {
+  text-align: left;
+}
+#addJob #itemStatusCombo_chosen .chosen-drop {
+  border: 1px solid #e0e0e0;
+}
+
+/**
+ * validation messages
+ */
+.LV_validation_message {
+    position: absolute;
+    font-size: .8em;
+    color: #ff5582;
+}
+#addJob > .row:first-child select + .LV_validation_message {
+    margin-top: 35px;
+}
+
+/* won't display the footer on addjob */
+section#footer {
+    display: none !important;
+}
+
+#save-button {
+    padding-left: 0px;
+}
+
+div#job-designer {
+    max-width: 275px;
+    margin-bottom: 15px;
+}

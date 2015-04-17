@@ -1,0 +1,843 @@
+/*  
+    Copyright (c) 2009-2010, LoveMachine Inc.
+    All Rights Reserved. 
+    http://www.lovemachineinc.com
+*/
+#confirmation{
+    display: none;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.popup-body {
+    display: none;
+}
+
+.popup-body,
+.user-info
+{
+    padding: 0 8px;
+    text-align: left;
+}
+
+.popup-body input[type="text"], .popup-body textarea,
+.user-info input[type="text"], .user-info textarea,
+.user-info select
+{
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    width: 370px;
+}
+
+.popup-body #bid_fee_desc {
+    width:270px;
+}
+
+.popup-body #bid_fee_amount {
+    width:70px;
+}
+
+.bugJobSummary {
+    display: block;
+    margin: 0;
+    padding: 5px;
+    border-style: none;
+    z-index: 3000;
+    float: right;
+    width: 200px
+}
+
+.popup-body input.date,
+.user-info input.date {
+    width: 130px;
+}
+.popup-body input.money,
+.user-info input.money {
+    width: 50px;
+}
+
+.popup-body p, .user-info p
+{
+    margin: 0 0 2px;
+}
+
+.popup-body .popup-delete-summary {
+    padding: 4px;
+}
+
+.table-userlist tr:hover{
+    cursor: pointer;
+}
+.table-userlist thead tr:hover{
+    cursor: default;
+}
+
+.linkTaskWho {
+    text-decoration: none;
+    cursor: pointer;
+}
+.linkTaskWho:hover {
+    cursor: pointer;
+    color: #98AAB2;
+}
+
+.roweven {
+    background-color: #eeeeee;
+    background-image: none;
+}
+
+.rowown,
+.roweven.rowown {
+    background: #FFCC99;
+}
+
+.rowbidon,
+.roweven.rowbidon {
+    background: #99E566;
+}
+
+.rowbidexpired,
+.roweven.rowbidexpired {
+    background: #FF8080;
+}
+
+.rowrunner,
+.roweven.rowrunner {
+    background: #B1E1F3;    
+}
+
+.rowmechanic,
+.roweven.rowmechanic {
+    background: #FFFF6C;
+}
+
+.rowbidexpired a,
+.rowrunner a,
+.rowmechanic a {
+    color:#000;
+}
+.workitem-selected {
+    background: #FFD;
+}
+
+.info-label{
+    font-weight: bold;
+}
+.info-label span{
+font-weight:normal;
+}
+.info-label textarea {
+    height: 110px;
+}
+
+.info-label textarea,
+.info-label input[type=text] {
+    width: 370px;
+}
+
+#editContainer {
+    width: 380px;
+    border: 0;
+    margin-top: 5px;
+}
+
+#editContainer p,
+#editContainer #buttonHolder,
+#editContainer .accordion {
+    margin-left: -88px !important;
+    width: 100%;
+}
+
+#bid-signup{
+text-align: center;
+}
+#bid-signup a{
+color:#98AAB2;
+}
+.right-button,
+.right-note {
+    float: right;
+    margin-right: 5px;
+}
+.left-button {
+    float: left;
+    margin-left: 5px;
+}
+.required-field {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: larger;
+}
+.left-col{
+    float: left;
+    margin-left: 30px;
+    width: 45%;
+}
+
+.right-col{
+    float: left;
+    margin-left: 30px;
+}
+#popup-bid{
+    z-index: 1200;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #666666;
+}
+#ui-datepicker-div,
+#ui-timepicker-div
+{
+    z-index: 1100; 
+}
+
+#sharethis_0    {
+    position:absolute;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+
+/* Paypal Reports */
+#pp-filter-box {
+    float:right;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border: 2px #DCD998 solid;
+    background-color:#FFD;
+    padding:8px 8px 19px 8px;
+    height:95px;
+    margin-bottom: 20px;
+}
+
+#pp-filter-rrbox {
+    float:right;
+    text-align:right;
+    margin-top:20px;
+}
+
+#pp-filter-rbox {
+    float:right;
+    text-align:right;
+    margin-top:20px;
+    margin-right:8px;
+}
+
+#pp-filter-lbox {
+    float:right;
+/*    text-align:right;*/
+    margin-right:8px;
+}
+
+#job_id {
+    width:69px;
+}
+.feesum {
+  cursor: pointer;
+}
+
+.second-line {
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+.clickable { cursor:pointer; }
+
+#searchbar select[name=user] {
+    width:100px;
+}
+
+#searchbar select[name=status] {
+    width: 150px;
+}
+#search-filter-section select {
+    text-align: left;
+    width:100px;
+}
+#search-filter-section  td.textAlignReport div div{
+    text-align: left;
+}
+
+
+td.textAlignReport {
+    text-align: right;
+    padding-top:4px;
+    margin:1px;
+    width:210px;
+}
+
+.report-label,
+#search-filter-section td.textAlignReport div div.report-label {
+    float: left;
+    width: 35%;
+    text-align: right;
+    padding: 5px 5px 0 0;
+}
+
+.report-input-item {
+    float: left;
+}
+
+.report-item-clear {
+    clear: both;
+    height: 1px;
+}
+
+#search-filter-wrap-reports {
+    width: 720px;
+}
+
+#searchForm  div > p {
+    margin-bottom: 0 !important;
+}
+
+#add {
+    font-weight: bold;
+    color: #6F6F6F;
+    font-size: 12px;
+}
+
+.floatLeft{
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+#ping-msg {
+    height: 100px;
+    width: 322px;
+}
+#send-ping-btn {
+    margin-top: 8px;
+}
+
+.taskProject span,
+.taskSummaryCell {
+    cursor: pointer;
+}
+
+.table-worklist td > div,
+.table-worklist td > a > div {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.taskProject {
+    width: 92px;
+}
+
+.taskSummary {
+    width: 510px;
+    font-weight: bold;
+}
+
+.taskSummary .taskID {
+    font-weight: normal;
+}
+
+.taskStatus {
+    width: 92px;
+}
+
+.taskWho {
+    width: 104px;
+}
+
+.taskAge {
+    width: 62px;
+    font-size: .7em;
+}
+
+.taskWho,
+.taskAge {
+    color: #999999;
+}
+
+.taskComments {
+    width: 20px;
+}
+
+.table-worklist td div > span:last-child:after,
+.fading,
+.fadingblue {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    content: "";
+    height: 1.7em;
+}
+
+.ui-combobox > .fading {
+    right: 32px;
+    height: 2em;
+}
+
+.taskComments > span:last-child:after,
+.taskAge > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%) transparent !important;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)))  transparent !important;
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%) transparent !important;
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%) transparent !important;
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%) transparent !important;
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%) transparent !important;
+}
+
+.fading,
+.table-worklist td div > span:last-child:after,
+.table-worklist tr:hover > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%) transparent;
+}
+
+.fadingblue {
+    background: -moz-linear-gradient(left, rgba(230, 243, 244, 0) 0%, rgba(230, 243, 244, 1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(230, 243, 244, 0)), color-stop(100%, rgba(230, 243, 244, 1))) transparent;
+    background: -webkit-linear-gradient(left, rgba(230, 243, 244, 0) 0%, rgba(230, 243, 244, 1) 100%) transparent;
+    background: -o-linear-gradient(left, rgba(230, 243, 244, 0) 0%, rgba(230, 243, 244, 1) 100%) transparent;
+    background: -ms-linear-gradient(left, rgba(230, 243, 244, 0) 0%, rgba(230, 243, 244, 1) 100%) transparent;
+    background: linear-gradient(to right, rgba(230, 243, 244, 0) 0%, rgba(230, 243, 244, 1) 100%) transparent;
+}
+
+.rowown > td div > span:last-child:after,
+.roweven.rowown > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(255,204,153,0) 0%, rgba(255,204,153,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,204,153,0)), color-stop(100%,rgba(255,204,153,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(255,204,153,0) 0%,rgba(255,204,153,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(255,204,153,0) 0%,rgba(255,204,153,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(255,204,153,0) 0%,rgba(255,204,153,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(255,204,153,0) 0%,rgba(255,204,153,1) 100%) transparent;
+}
+
+.rowbidon > td div > span:last-child:after,
+.roweven.rowbidon > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(153,229,102,0) 0%, rgba(153,229,102,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(153,229,102,0)), color-stop(100%,rgba(153,229,102,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(153,229,102,0) 0%,rgba(153,229,102,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(153,229,102,0) 0%,rgba(153,229,102,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(153,229,102,0) 0%,rgba(153,229,102,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(153,229,102,0) 0%,rgba(153,229,102,1) 100%) transparent;
+}
+
+.rowbidexpired > td div > span:last-child:after,
+.roweven.rowbidexpired > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(255,128,128,0) 0%, rgba(255,128,128,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,128,128,0)), color-stop(100%,rgba(255,128,128,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(255,128,128,0) 0%,rgba(255,128,128,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(255,128,128,0) 0%,rgba(255,128,128,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(255,128,128,0) 0%,rgba(255,128,128,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(255,128,128,0) 0%,rgba(255,128,128,1) 100%) transparent;
+}
+
+.rowrunner > td div > span:last-child:after,
+.roweven.rowrunner > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(177,225,243,0) 0%, rgba(177,225,243,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(177,225,243,0)), color-stop(100%,rgba(177,225,243,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(177,225,243,0) 0%,rgba(177,225,243,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(177,225,243,0) 0%,rgba(177,225,243,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(177,225,243,0) 0%,rgba(177,225,243,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(177,225,243,0) 0%,rgba(177,225,243,1) 100%) transparent;
+}
+
+.rowmechanic > td div > span:last-child:after,
+.roweven.rowmechanic > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(255,255,108,0) 0%, rgba(255,255,108,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,108,0)), color-stop(100%,rgba(255,255,108,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(255,255,108,0) 0%,rgba(255,255,108,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(255,255,108,0) 0%,rgba(255,255,108,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(255,255,108,0) 0%,rgba(255,255,108,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(255,255,108,0) 0%,rgba(255,255,108,1) 100%) transparent;
+}
+
+.roweven > td div > span:last-child:after {
+    background: -moz-linear-gradient(left,  rgba(238,238,238,0) 0%, rgba(238,238,238,1) 100%) transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(238,238,238,0)), color-stop(100%,rgba(238,238,238,1)))  transparent;
+    background: -webkit-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%) transparent;
+    background: -o-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%) transparent;
+    background: -ms-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%) transparent;
+    background: linear-gradient(to right,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%) transparent;
+}
+
+.taskSummaryCell a,
+.taskProject span > a {
+    text-decoration: none;
+}
+
+.taskProject span > a {
+    color: #999999;
+}
+
+.taskSummaryCell a {
+    color: #222222;
+}
+
+.job-status {
+    color: #999999;
+    text-transform: capitalize;
+}
+
+.taskSummary > span {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.detailContainer {
+    width: 50%;
+}
+
+.descriptionHolder,
+.detailContainer {
+    margin-left: -25px;
+}
+
+table.tablesorter thead tr .header {
+    background-image: url(../images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    cursor: pointer;
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+
+#for_view li .notestext a,
+.comment a {
+    color: rgb(0, 118, 252);
+}
+#for_view li .notestext a:hover,
+.comment a:hover {
+    text-decoration:none;
+}
+
+input.button-disabled ,
+.button-disabled {
+    cursor: default;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+}
+#phone-confirm-form {
+    width: 253px;
+}
+#login-form, #phone-confirm-form {
+    border: 1px solid black;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 32px;
+}
+
+#login-form h2, #phone-confirm-form h2 {
+    color: #000;
+    margin-top: 8px;
+}
+
+#loginFormHolder, #confirmPhoneFormHolder {
+    position: relative;
+    width: 420px;
+    height: 180px;
+}
+#login-form .LV_validation_message, 
+#phone-confirm-form .LV_validation_message {
+    text-align: left;
+}
+
+#login-form .LV_valid,
+#phone-confirm-form .LV_valid {
+    padding-left: 0px;
+}
+
+.profile-link{
+    cursor: pointer;
+}
+
+#more-accordion #more-panel {
+    margin: 0;
+    width: 386px;
+    padding-top: 6px;
+}
+
+#more-panel.ui-accordion-content {
+    margin-top: 5px;
+    padding: 0px;
+    background-color: #FFFFDD;
+}
+#more-panel.ui-widget-content {
+    background-image: none;
+}
+
+
+#w2checkbox {
+    padding-top:5px;
+}
+
+#paypal_email {
+    width: 200px;
+}
+
+#savePayPalEmailDialog,
+#saveLaterDialog {
+    text-align:justify;
+}
+
+.okButton {
+    float: right;
+    margin-top: 20px;
+}
+
+.loading {
+    font-style: italic;
+}
+
+.past-due {
+    color: #000000;
+}
+
+/* Home page styles */
+
+#outside.home {
+    margin-top: 10px;
+}
+.home #center {
+    margin: 0 auto;
+    float: left;
+    text-align: center;
+    width: 862px;
+}
+#home-header {
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.home-header-logo {
+    float: left;
+    height: 67px;
+    margin: 0;
+    padding: 0;
+}
+.home-header-logo a {
+    border: none;
+    margin-right: 15px;
+}
+.home-header-nav {
+    float: right;
+    margin: 25px 40px 0 0;
+    font-size: 16px;
+    color: #98AAB2;
+}
+.home-header-nav a {
+    color: #98AAB2;
+    padding: 0 10px;
+    font-weight: bold;
+}
+#home-slogan h2 {
+    font-size: 50px;
+    font-weight: normal;
+    padding: 0;
+    color: #333;
+}
+.slogan-text {
+    font-size: 18px;
+    color: #98AAB2;
+}
+#home-nav-btns {
+    margin: 40px 0;
+}
+#home-nav-btns a {
+    color: #333;
+    margin: 0 30px;
+    cursor: pointer;
+    background-image: none;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    font: 16px/100% Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: auto;
+    padding: 5px 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: 1em; 
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    border: solid 1px #999;
+    background: #CCC;
+    background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#DEDEDE));
+    background: -moz-linear-gradient(top,  #CCCCCC,  #DEDEDE);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#DEDEDE');
+}
+#home-nav-btns a:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#DEDEDE), to(#CCCCCC));
+    background: -moz-linear-gradient(top,  #DEDEDE,  #CCCCCC);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEDEDE', endColorstr='#CCCCCC');
+}
+#home-videos {
+}
+.main-video {
+    height: 270px;
+}
+.other-videos {
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.other-videos p {
+    font-size: 16px;
+}
+.other-videos a {
+    padding: 0 20px;
+    color: #98AAB2;
+}
+#contact-dialog {
+    display: none;
+}
+#contact-dialog .text-field {
+    width: 370px;
+}
+#contact-dialog textarea {
+    width: 370px;
+    height: 110px;
+}
+#home-footer {
+    width: 725px;
+    margin: 0 auto;
+    background-color: #CCC;
+    min-height: 50px;
+    padding: 15px 30px;
+    border: #CCC solid 1px;
+}
+.home-footer-nav {
+    float: right;
+    margin: 25px 40px 0 0;
+    font-size: 16px;
+    color: #333;
+}
+.home-footer-nav a {
+    color: #333;
+    padding: 0 20px;
+    font-weight: bold;
+}
+.candp-logo {
+    color: #333;
+    float: left;
+}
+.editProjectLogo {
+    float: left;
+    line-height: 10px;
+    font-size: 10px;
+}
+#edit_cr_error, #edit_cr_error_ap {
+    text-align: left;
+    color: #FF0000;
+}
+
+.home-header-nav span {
+    padding-right: 10px;
+}
+
+.onlyActiveCheckbox {
+    margin: 0;
+    position: 'relative';
+    top: '1px';
+}
+
+#internal {
+    margin-left: 0px;
+}
+
+a#addJobButton {
+    margin: 31px 5px 2px 12px;
+}
+
+.table-worklist .comments-icon {
+    background: url("../images/primaryIcons-WL.png") no-repeat scroll 0 -685px transparent;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.table-worklist a:hover,
+.table-worklist .linkTaskWho > a:hover {
+    color: #009999 !important;
+}
+
+.table-worklist tr:hover {
+    background-image: none;
+    background-color: transparent;
+}
+
+.table-worklist tr td:first-child {
+  padding-left: 10px;
+}
+
+.table-worklist .table-hdng {
+    height: 28px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#worklist #left, 
+#worklist #right {
+    display: none;
+}
+
+#worklist #container {
+    width: 945px;
+    top: -12px;
+}
+
+#worklist #center {
+    width: auto;
+    background: transparent;
+    padding: 0;
+    min-height: auto;
+    float: none;
+}
+
+.table-worklist .worklist-pagination-row > td > span {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.table-worklist .worklist-pagination-row .page,
+.table-worklist .worklist-pagination-row .previous,
+.table-worklist .worklist-pagination-row .next {
+    padding: 3px;
+}
+
+.table-worklist .worklist-pagination-row a {
+    text-decoration: none;
+}
+
+.table-worklist .worklist-pagination-row .inactive {
+    color: #888888;
+}

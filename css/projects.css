@@ -1,0 +1,172 @@
+/*
+* Copyright (c) 2011, High Fidelity Inc.
+* All Rights Reserved.
+* 
+* http://highfidelity.io
+* 
+* Development History:
+* 2011-07-30   #14907      Leo
+*
+*/
+
+#title-wrapper {
+    text-align: right;
+    padding-top: 30px;
+}
+
+#add-project {
+    border: 0 none;
+    background-color: #608e96;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+#add-project:hover {
+    background-color: #007F7c;
+    text-decoration: none;
+}
+
+#all-projects {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #666666;
+}
+
+#projects {
+    padding-top: 30px;
+    color: #666666;
+    text-align: center;
+}
+
+#projects > article {
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #CCCCCC;
+    display: inline-block;
+    height: 360px;
+    margin: 10px;
+    margin: 0 10px 25px 0;
+    padding: 22px 25px 20px 25px;
+    text-align: left;
+    vertical-align: middle;
+    width: 234px;
+    position: relative;
+}
+
+#projects > article img {
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #CCCCCC;
+}
+
+#projects > article h3 {
+    padding-bottom: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+#projects > article h3 a {
+    font-size: 26px;
+    font-weight: bold;
+    color: #007F7C;
+    text-decoration: none;
+    max-width: 255px;
+}
+
+#projects > article h3:before {
+    content: '\00a0';
+    width: 35px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+#projects section.description {
+    max-height: 180px;
+    font-size: 16px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#projects article .stats {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    list-style-type: none;
+}
+
+#projects article .stats:before {
+    content: '\00a0';
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    height: 50px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+#projects article .stats li {
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+#projects article .stats a {
+    text-decoration: none;
+    color: #666666;
+}
+
+#projects article .stats a:underline {
+    text-decoration: underline;
+}
+
+/**
+ * Responsive
+ */
+@media screen and (max-width: 530px) {
+    #projects > article {
+        margin: 0 auto 25px;
+        float: none;
+    }
+    
+    section#projects {
+        text-align: center;
+    }
+    
+    #add-project,
+    #all-projects {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #add-project,
+    #all-projects {
+        font-size: 14px;
+    }
+
+    #container {
+        padding: 5px;
+    }
+}

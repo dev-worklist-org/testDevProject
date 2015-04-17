@@ -1,0 +1,65 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand wl-icon-hifi" href="https://highfidelity.io"></a>
+            <a class="navbar-brand wl-icon-worklist" href="./">Worklist</a>
+        </div>
+        <div class="collapse navbar-collapse dropdown-navmenu" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a class="wl-icon-jobs" href="./jobs">Jobs</a></li>
+                <li><a class="wl-icon-projects" href="./projects">Projects</a></li>
+                <!--<li><a class="wl-icon-jobs" href="./status">Status</a></li>-->
+                <li><a class="wl-icon-team" href="./team">Team</a></li>
+                <li><a class="wl-icon-help" href="./help">Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-nav-md col-sm-5 col-md-5 dd-max-width">
+              <li>
+                <div id="search-query" class="autocomplete">
+                     <input type="text" name="query" placeholder="Search" value="{{getQuery}}" />
+                     <a  id="query-search-button" title="Search"></a>
+                </div>
+              </li>
+              {{#currentUser.id}}
+                <li>
+                  <div id="buttons">
+                    <a href="./job/add" id="addJobButton"
+                      title="Suggest a Feature or Report a Bug">
+                      Add job
+                    </a>
+                    <a class="send_love" href="#" id="sendLoveButton" title="Send Love"
+                     data-toggle="modal" data-target="#send_love">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                </li>
+                {{/currentUser.id}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right  col-sm-3 dd-max-width">
+                {{#currentUser.id}}
+                    <li class="dropdown col-sm-12">
+                        <a href="#" class="dropdown-toggle text-right text-left-xs" data-toggle="dropdown">
+                            {{currentUser.nickname}}
+                        <b class="caret"></b></a>
+                        <ul class="dropdown-menu col-sm-12">
+                            <li><a href="./user/{{currentUser.id}}"><i class="dropdown-menu-icon fa fa-user"></i>My profile</a></li>
+                            <li><a class="following" href="#"><i class="dropdown-menu-icon fa fa-briefcase"></i>Jobs I'm Following</a></li>
+                            <li><a class="budget" href="#"><i class="dropdown-menu-icon fa fa-dollar"></i>My earnings</a></li>
+                            <li><a href="./settings"><i class="dropdown-menu-icon fa fa-gear"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./github/logout/{{redir_url}}"><i class="dropdown-menu-icon fa fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                {{/currentUser.id}}
+                {{^currentUser.id}}
+                    <li><a href="./github/login/{{redir_url}}"><i class="fa fa-github"></i> Log in</a></li>
+                {{/currentUser.id}}
+            </ul>
+        </div>
+    </div>
+</nav>

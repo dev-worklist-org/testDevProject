@@ -1,0 +1,25 @@
+<h2>Reset Password</h2>
+{{#msg}}
+  <p class="error">{{msg}}</p>
+{{/msg}}
+{{^msg}}
+  <form action="./resetpass" method="post" name="frmlogin" onSubmit="return validate();">
+    <input type="hidden" name="token" value="{{token}}" />
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <label for="username">Email</label>
+        <input type="text" name="username" id="username" value="{{un}}" readonly=""  class="form-control" />
+      </div>
+      <div class="col-md-offset-2 col-md-8">
+        <label for="pasword">New Password</label>
+        <input type="password" name="password" id="password" class="form-control" />
+      </div>
+      <div class="col-md-offset-2 col-md-8">
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" name="confirmpassword" id="confirmpassword" class="form-control">
+      </div>
+      <div class="col-md-offset-7 col-md-3">
+        <input type="submit" class="wide" value="Reset Password" alt="Reset Password" name="submit" />
+      </div>
+  </form>
+{{/msg}}

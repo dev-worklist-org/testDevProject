@@ -1,0 +1,97 @@
+<form role="form" id="settings" method="post">
+    <h2>Settings</h2>
+    <div class="row">
+        <section class="col-md-6">
+            <p>
+                To streamline integration, Worklist depends on GitHub for your username, full name, email and photo.
+                Please change those settings on GitHub.
+            </p>
+            <label for="paypal_email">Paypal Email</label>
+            <input type="text" id="paypal_email" name="paypal_email" class="form-control" value="{{userInfo.paypal_email}}" />
+            <label>Email notifications</label>
+            <ul>
+                <li>
+                    <input type="checkbox" id="bidding_notif" name="bidding_notif"
+                     value="1" {{#userInfo.bidding_notif}}checked="checked"{{/userInfo.bidding_notif}} />
+                    <label for="bidding_notif">New Jobs set to bidding</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="review_notif" id="review_notif"
+                      value="1" {{#userInfo.review_notif}}checked="checked"{{/userInfo.review_notif}} />
+                    <label for="review_notif">Any job set to review</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="self_notif" id="self_notif"
+                      value="1" {{#userInfo.self_notif}}checked="checked"{{/userInfo.self_notif}} />
+                    <label for="self_notif">Receive email notifications from my actions</label>
+                </li>
+            </ul>
+
+            <label for="country">What country are you in?</label>
+            {{& countrySelectBox}}
+
+            <label for="timezone">What timezone are you in?</label>
+            {{& timezoneSelectBox}}
+
+            <label for="about">Short description of you and your skills</label>
+            <textarea id="about" name="about" class="form-control autogrow">{{userInfo.about}}</textarea>
+
+            <h3>Your Systems</h3>
+            <div id="systems-forms">
+                {{#userSystems}}
+                    <div class="{{#is_placeholder}}system-placeholder-wrapper{{/is_placeholder}}{{^is_placeholder}}system-wrapper{{/is_placeholder}}">
+                        <a class="system-remove" href="javascript:;">remove</a>
+                        <h4 class="system-title">System {{index}}</h4>
+                        <div>
+                            <label>Operating system(s), comma separated</label>
+                            <input name="system_operating_systems[]" type="text" class="form-control" value="{{operating_systems}}" />
+                        </div>
+                        <div>
+                            <label>Hardware</label>
+                            <textarea name="system_hardware[]" class="form-control" rows="7">{{hardware}}</textarea>
+                        </div>
+                        <input type="hidden" name="system_id[]" value="{{id}}" />
+                        <input type="hidden" name="system_delete[]" value="" />
+                    </div>
+                {{/userSystems}}
+            </div>
+            <a class="system-add" href="javascript:;">Add another system</a>
+        </section>
+        <section class="col-md-6">
+            <h3>For United States citizens</h3>
+            <p>
+                All US Citizens must submit a W-9 to be paid by Worklist.
+                <a href="http://www.irs.gov/pub/irs-pdf/fw9.pdf" target="_blank">
+                    Download W-9 Here
+                </a>.
+                Remember, you need a valid US mailing address to receive your 1099 
+                tax documents at the end of the year. If you move, it\'s up to you
+                to let us know your new address.
+            </p>
+            <p>
+                <input type="checkbox" name="w9_accepted" id="w9_accepted" 
+                  {{#user.getW9_accepted}}checked="checked" disabled="disabled"{{/user.getW9_accepted}} />
+                <label id="w9_accepted_label" for="w9_accepted">Check this box to let us know you'll do your part!</label>
+            </p>
+        </section>
+        <section class="col-md-6">
+            <h3>W-9</h3>
+            <p>All US Citizens must submit a signed W-9 before we'll pay you. Once submitted, one of our staff will verify the receipt and then activate your account for bidding within the next 24 hours.</p>
+            <fieldset id="attachments">
+              <label>Drag &amp; drop or <em>select file</em> to attach a W-9 document.</label>
+              <ul></ul>
+            </fieldset>
+            <div class="uploadnotice-w9"></div>
+        </section>
+    </div>
+    <div class="row">
+        <p><input type="submit" id="save" value="Save changes" name="save" /></p>
+    </div>
+</form>
+
+<script type="text/javascript">
+  var uploadApiKey = '{{uploadApiKey}}';
+  $(function () {
+    Settings.init();
+  });
+</script>

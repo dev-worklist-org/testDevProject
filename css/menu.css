@@ -1,0 +1,318 @@
+/**
+ * override default bootstrap navbar with customs settings
+ */
+
+body > nav.navbar {
+    border-radius: 0px; /* squared corners */
+    background: none rgb(51, 51, 51); /* flat background */
+}
+
+/* our brand links are actually logo images */
+body > nav.navbar a.navbar-brand {
+    display: inline-block;
+    height: 32px;
+    text-indent: -9999px;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+body > nav.navbar a.navbar-brand[href="https://highfidelity.io"] {
+    width: 60px;
+    text-indent: 0;
+    padding: 0;
+    padding-top: 2px;
+    text-align: center;
+    margin-left: 0;
+}
+
+/*navbar links colors and background */
+body > nav.navbar-inverse .navbar-nav > .li > a {
+    color: #515151;    
+}
+
+/* navbar active links bg are too dark for us, let's make them a bit lighter */
+body > nav.navbar-inverse .navbar-nav > .open > a, 
+body > nav.navbar-inverse .navbar-nav > .open > a:hover, 
+body > nav.navbar-inverse .navbar-nav > .open > a:focus,
+body > nav.navbar-inverse .navbar-nav > .active > a, 
+body > nav.navbar-inverse .navbar-nav > .active > a:hover, 
+body > nav.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ddd;
+    background-color: #282828;
+}
+
+@media (min-width: 768px) {
+    /* navbar links borders */
+    body > nav.navbar ul.nav:first-child li:first-child {
+        border-left: 1px solid #515151;
+    }
+    body > nav.navbar ul.nav:first-child li {
+        border-right: 1px solid #515151;
+    }
+
+    /* links at the right side of the navbar will only have a left-border except for the first one */
+    body > nav.navbar ul.nav:last-child > li:nth-child(n+2) {
+        border-left: 1px solid #515151;
+    }
+
+    /* iconic links styling */
+    body > nav.navbar ul.nav:first-child li a {
+        display: inline-block;
+        padding-top: 35px;
+        padding-bottom: 5px;
+        width: 80px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center 8px;
+    }
+
+     body > nav.navbar ul.nav a[href$="/jobs"] {
+        background-position-y: 9px !important;
+    }
+
+    body > nav.navbar ul.nav a[href$="/projects"] {
+        background-position-y: 10px !important;
+    }
+
+    body > nav.navbar ul.nav a[href$="/status"] {
+        background-position-y: 9px !important;
+    }
+
+    body > nav.navbar ul.nav a[href$="/team"] {
+        background-position-y: 12px !important;
+    }
+
+    body > nav.navbar ul.nav a[href$="/help"] {
+        background-position-y: 6px !important;
+    }
+
+    /* default navbar dropdown is thiner than desired height  */
+    body .navbar-nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+#addJobButton {
+    background-color: #007F7c;
+    color: #fff;
+    font-size: 1em;
+    border: 0;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 13px;
+    width: 85px;
+    height: 35px;
+    line-height: 2.6em;
+    margin-left: 10px;
+}
+
+#sendLoveButton {
+    background-color: #007F7c;
+    background-image: url('../images/wl-icons/fa-heart.svg');
+    color: #fff;
+    font-size: 1em;
+    border: 0;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 13px;
+    width: 40px;
+    height: 35px;
+    line-height: 2.6em;
+    margin-left: 5px;
+}
+
+#buttons {
+    padding-left: 0;
+}
+
+@media (max-width: 767px) {
+    #buttons {
+        float: right;
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.navbar-nav-md {
+    max-width: 600px;
+}
+
+.navbar-nav-md > li {
+    padding: 0px;
+}
+
+#search-query input {
+    width: 180px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid #666666;
+    background-color: #666666;
+    height: 35px;
+    padding-left: 10px;
+    margin-top: 13px;
+    float: left;
+    color: #999999;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.45em;
+    margin-left: 15px;
+}
+
+/**
+ * autocomplete list in search query needs to be tweaked a bit since
+ * it doesn't seem to be doing a good coordinates calculation with it's
+ * corresponding mirrorDiv
+ *
+ * @todo: fix the js behavior to work in the search input
+ * the same way than it does for job comments form
+ **/
+#search-query > ul {
+    margin-top: 18px;
+}
+
+@media (max-width: 1280px) and (min-width: 768px) {
+    #search-query input {
+        width: 120px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 960px) and (min-width: 768px) {
+    #search-query input {
+        width: 75px;
+    }
+}
+
+@media (max-width: 860px) and (min-width: 768px) {
+    #search-query input {
+        font-size: .7em;
+        width: 45px;
+        margin-left: 5px;
+    }
+}
+
+#search-query input:focus {
+    outline: 0;
+    border-color: #007F7c;
+    color: #cccccc;
+}
+
+#query-search-button {
+    background-color: #007F7c;
+    border: 0px;
+    display: inline-block;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 50px;
+    margin-top: 13px;
+    float: left;
+    height: 35px;
+    background-image: url('../images/wl-icons/search-magnifier.svg');
+    background-repeat: no-repeat;
+    background-size: 24px 27px;
+    background-position: 13px 5px;
+}
+
+@media (max-width: 1060px) {
+    .navbar-nav-md {
+        max-width: 390px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar-nav-md {
+        max-width: 375px;
+    }
+}
+
+@media (max-width: 995px) {
+   .navbar-nav-md {
+        max-width: 335px;
+    }
+}
+
+@media (max-width: 960px) {
+    body > nav.navbar ul.nav:first-child li a,
+    body > nav.navbar a.navbar-brand.wl-icon-worklist {
+        width: 70px;
+    }
+
+   .navbar-nav-md {
+        max-width: 298px;
+    }
+
+    #addJobButton {
+        width: 60px;
+        font-size: 0.9em;
+        line-height: 2.8em;
+    }
+
+    #search-query {
+        padding-left: 5px;
+        padding-right: 0px;
+    }
+
+    body > nav.navbar a.navbar-brand[href="https://highfidelity.io"] {
+        width: 50px;
+    }
+}
+
+@media (max-width: 860px) {
+    #query-search-button {
+        width: 35px;
+        background-size: 20px 27px;
+        background-position: 7px 5px;
+    }
+
+    .navbar-nav-md {
+        max-width: 208px;
+    }
+
+    #addJobButton {
+        width: 48px;
+        font-size: 0.8em;
+        line-height: 3.3em;
+    }
+
+    #search-query {
+        padding-right: 3px;
+    }
+}
+
+@media (max-width : 768px) {
+    body > nav.navbar ul.nav:first-child li a,
+    body > nav.navbar a.navbar-brand.wl-icon-worklist {
+       width: calc(100% - 125px);
+    }
+
+    #addJobButton {
+        width: 100%;
+        font-size: 1em;
+        line-height: 2.6em;
+    }
+
+    .navbar-nav-md {
+        max-width: 100%;
+    }
+
+    #search-query {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #search-query input {
+        width: calc(100% - 50px);
+    }
+}

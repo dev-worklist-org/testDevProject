@@ -1,0 +1,36 @@
+
+#start-date, 
+#end-date {
+    width: 85px;
+}
+
+#reports-filter > .row:first-child input,
+#reports-filter > .row:first-child .chosen-container {
+    font-size: .8em;
+}
+
+#reports-filter > .row {
+    margin-top: 10px;
+    margin-bottom: 20px
+}
+
+#reports-filter > .row:last-child fieldset {
+    text-align: right;
+}
+
+#reports-filter > .row:last-child fieldset {
+    margin-top: 5px;
+}
+
+#reports-filter > .row:last-child fieldset label {
+    width: 35%;
+    text-align: right;
+    float: left;
+    padding-top: 8px;
+}
+
+#reports-filter > .row:last-child fieldset:last-child label {
+    float: none;
+    text-align: right;
+    padding: 0;
+}
